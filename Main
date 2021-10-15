@@ -1,0 +1,100 @@
+package javahomwork;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int i;
+		int j;
+		int k;
+		int g;
+		int h;
+		String floor;
+		System.out.println("input room number");
+		int room = sc.nextInt();
+		System.out.println("room: "+room+" is in");
+		if (room <= 36 && room >= 1) {
+			System.out.println("1-st entrance");
+		} else if (room > 36 && room <= 72) {
+			System.out.println("2-d entrance");
+			room = room - 36;
+		} else if (room > 72 && room <= 108) {
+			room = room - 72;
+			System.out.println("3-d entrance");
+		} else if (room > 108 && room <= 144) {
+			room = room - 108;
+			System.out.println("4-th entrance");
+		} else {
+			System.out.println("wrong number");
+		}
+		if (room%4==0) {
+			g=room/4;
+			System.out.println("on floor: "+g);
+		} else if(room%4!=0) {
+			h=room/4+1;
+			System.out.println("on floor: "+h);
+		}
+//		switch (room) {
+//		case 1:
+//		case 2:
+//		case 3:
+//		case 4:
+//			floor = "floor 1";
+//			break;
+//		case 5:
+//		case 6:
+//		case 7:
+//		case 8:
+//			floor = "floor 2";
+//			break;
+//		case 9:
+//		case 10:
+//		case 11:
+//		case 12:
+//			floor = "floor 3";
+//			break;
+//		case 13:
+//		case 14:
+//		case 15:
+//		case 16:
+//			floor = "floor 4";
+//			break;
+//		case 17:
+//		case 18:
+//		case 19:
+//		case 20:
+//			floor = "floor 5";
+//			break;
+//		case 21:
+//		case 22:
+//		case 23:
+//		case 24:
+//			floor = "floor 6";
+//			break;
+//		case 25:
+//		case 26:
+//		case 27:
+//		case 28:
+//			floor = "floor 7";
+//			break;
+//		case 29:
+//		case 30:
+//		case 31:
+//		case 32:
+//			floor = "floor 8";
+//			break;
+//		case 33:
+//		case 34:
+//		case 35:
+//		case 36:
+//			floor = "floor 9";
+//			break;
+//		default:
+//			floor = "unknown floor";
+//		}
+//		System.out.println("and on: " + floor);
+	}
+
+}
